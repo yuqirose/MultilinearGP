@@ -9,7 +9,7 @@ analytics. MLGP is a Gaussian process model that learns high-order structure in 
 Multilinear Gaussian process regression, implemented in MATLAB.
 See details in our AISTATS 2018 paper [Tensor Regression meets Gaussian Processes](http://proceedings.mlr.press/v84/yu18a/yu18a.pdf)
 
-![](MLGP.pdf "Graphical Model for MLGP")
+![](MLGP.jpg "Graphical Model for MLGP")
 
 # Test Example
 
@@ -26,7 +26,7 @@ cuisine type and price band). We consider this
 to be a regression problem where the objective is to
 predict the scores given the attributes of a restaurant
 as an input query. Since there are 138 consumers, this
-leads to a multitask problem composed of 138 ? 3 regression
+leads to a multitask problem composed of 138x3 regression
 tasks
 
 **testing script**
