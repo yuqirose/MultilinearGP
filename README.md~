@@ -1,0 +1,48 @@
+# Multi-linear Gaussian Process
+A Gaussian process model that learns high-order structure in the data using multi-linear (tensor) kernel. 
+
+[![Build Status](https://travis-ci.org/voxpelli/node-github-publish.svg?branch=master)](https://travis-ci.org/voxpelli/node-github-publish)
+[![Coverage Status](https://coveralls.io/repos/voxpelli/node-github-publish/badge.svg)](https://coveralls.io/r/voxpelli/node-github-publish)
+[![Dependency Status](https://gemnasium.com/voxpelli/node-github-publish.svg)](https://gemnasium.com/voxpelli/node-github-publish)
+
+Multilinear Gaussian process regression, implemented in MATLAB.
+See details in our paper [Tensor Regression meets Gaussian Process](https://arxiv.org/abs/1711.00073)
+
+![](tlstm.png "Graphical Model for MLGP")
+
+# File  
+
+**test example**
+
+```matlab
+run test_mlgp.m
+```
+
+
+
+## Directory
+
+* **reader.py**
+read the data into train/valid/test datasets, normalize the data if needed
+
+* **model.py**
+seq2seq model for sequence prediction
+
+* **trnn.py**
+tensor-train lstm cell and corresponding tensor train contraction
+
+* **trnn_imply.py**
+forward step in tensor-train rnn, feed previous predictions as input
+
+## Citation
+
+If you think the repo is useful, we kindly ask you to cite our work at 
+
+```
+@article{yu2017long,
+  title={Long-term forecasting using tensor-train RNNs},
+  author={Yu, Rose and Zheng, Stephan and Anandkumar, Anima and Yue, Yisong},
+  journal={arXiv preprint arXiv:1711.00073},
+  year={2017}
+}
+```

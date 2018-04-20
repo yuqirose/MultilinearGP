@@ -1,0 +1,28 @@
+clear;clc;
+
+ranks = [3,3,3];
+s2 = 1e-3;
+D = 45;
+T1 = 138;
+T2 = 3;
+dims = [D,,3];
+
+
+[X_obv, Y_obv]  = mlgp_load_data('RestaurantDataset.mat');
+
+
+N = size(X_obv,1);
+data_ind = randperm(N);
+train_ratio = 0.8;
+train_size = ceil(N*train_ratio);
+train_ind = data_ind(1:train_size);
+test_ind = data_ind(train_size+1:end);
+
+
+
+%% training
+[model, L_list ] = mlgp_train( X_obv, Y_obv, dims,ranks);
+
+[ Y_pred, V_pred, MSE ] = mlgp_predict(X_obv, Y_obv, train_ind, test_ind, dims, model );
+fprintf('mse %d', MSE);
+plot(L_list(10:end));
