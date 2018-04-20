@@ -9,11 +9,12 @@ analytics. MLGP is a Gaussian process model that learns high-order structure in 
 Multilinear Gaussian process regression, implemented in MATLAB.
 See details in our AISTATS 2018 paper [Tensor Regression meets Gaussian Processes](http://proceedings.mlr.press/v84/yu18a/yu18a.pdf)
 
-![](mlgp.pdf "Graphical Model for MLGP")
+![](MLGP.pdf "Graphical Model for MLGP")
 
 # Test Example
 
-** example dataset **
+**example dataset**
+
 The Restaurant & Consumer Dataset contains data to build a restaurant recommender
 system where the objective is to predict
 consumer ratings given to different restaurants. Each
@@ -28,24 +29,11 @@ as an input query. Since there are 138 consumers, this
 leads to a multitask problem composed of 138 ? 3 regression
 tasks
 
-** testing script **
+**testing script**
+
 ```matlab
 run test_mlgp.m
 ```
-
-## Directory
-
-* **reader.py**
-read the data into train/valid/test datasets, normalize the data if needed
-
-* **model.py**
-seq2seq model for sequence prediction
-
-* **trnn.py**
-tensor-train lstm cell and corresponding tensor train contraction
-
-* **trnn_imply.py**
-forward step in tensor-train rnn, feed previous predictions as input
 
 ## Citation
 
